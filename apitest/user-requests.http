@@ -1,0 +1,8 @@
+### Sign Up
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "email": "a@b.oilerplate",
+  "name": "hi"
+}
