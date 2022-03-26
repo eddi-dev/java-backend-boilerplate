@@ -37,4 +37,17 @@ public class BoilerplateUserPersistenceAdapter implements BoilerplateUserReposit
                 entity.getDisplayName()
         );
     }
+
+    @Override
+    public BoilerplateUser findByEmail(String email) {
+        final BoilerplateUserEntity entity = repository.getByEmail(email);
+        if (entity == null) {
+            return null;
+        }
+        return BoilerplateUser.from(
+                entity.getUid(),
+                entity.getEmail(),
+                entity.getDisplayName()
+        );
+    }
 }

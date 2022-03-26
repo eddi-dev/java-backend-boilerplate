@@ -21,7 +21,6 @@ import javax.persistence.UniqueConstraint;
         uniqueConstraints = {
                 @UniqueConstraint(name = "uq_default_user_uid", columnNames = "uid"),
                 @UniqueConstraint(name = "uq_default_user_email", columnNames = "email"),
-                @UniqueConstraint(name = "uq_default_user_name", columnNames = "display_name"),
         }
 )
 public class BoilerplateUserEntity {

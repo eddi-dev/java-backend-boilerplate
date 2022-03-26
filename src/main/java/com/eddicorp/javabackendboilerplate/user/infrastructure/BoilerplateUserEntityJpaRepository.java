@@ -4,4 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BoilerplateUserEntityJpaRepository extends JpaRepository<BoilerplateUserEntity, Long> {
     BoilerplateUserEntity getByUid(String uid);
+
+    BoilerplateUserEntity getByEmail(String email);
 }

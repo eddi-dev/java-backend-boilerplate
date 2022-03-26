@@ -5,4 +5,6 @@ public interface BoilerplateUserRepository {
     BoilerplateUser save(BoilerplateUser user);
 
     BoilerplateUser findById(BoilerplateUserId userId);
+
+    BoilerplateUser findByEmail(String email);
 }
