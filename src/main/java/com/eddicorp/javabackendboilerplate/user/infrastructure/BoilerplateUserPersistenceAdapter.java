@@ -1,6 +1,7 @@
 package com.eddicorp.javabackendboilerplate.user.infrastructure;
 
 import com.eddicorp.javabackendboilerplate.user.domain.BoilerplateUser;
+import com.eddicorp.javabackendboilerplate.user.domain.BoilerplateUserId;
 import com.eddicorp.javabackendboilerplate.user.domain.BoilerplateUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -22,5 +23,18 @@ public class BoilerplateUserPersistenceAdapter implements BoilerplateUserReposit
         );
         repository.save(newEntity);
         return user;
+    }
+
+    @Override
+    public BoilerplateUser findById(BoilerplateUserId userId) {
+        final BoilerplateUserEntity entity = repository.getByUid(userId.getValue());
+        if (entity == null) {
+            return null;
+        }
+        return BoilerplateUser.from(
+                entity.getUid(),
+                entity.getEmail(),
+                entity.getDisplayName()
+        );
     }
 }

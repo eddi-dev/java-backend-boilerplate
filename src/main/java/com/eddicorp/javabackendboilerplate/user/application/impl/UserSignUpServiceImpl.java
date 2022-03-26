@@ -1,8 +1,8 @@
 package com.eddicorp.javabackendboilerplate.user.application.impl;
 
+import com.eddicorp.javabackendboilerplate.user.application.UserSignUpCommand;
+import com.eddicorp.javabackendboilerplate.user.application.UserSignUpResult;
 import com.eddicorp.javabackendboilerplate.user.application.UserSignUpService;
-import com.eddicorp.javabackendboilerplate.user.application.dto.UserSignUpCommand;
-import com.eddicorp.javabackendboilerplate.user.application.dto.UserSignUpResult;
 import com.eddicorp.javabackendboilerplate.user.domain.BoilerplateUser;
 import com.eddicorp.javabackendboilerplate.user.domain.BoilerplateUserRepository;
 import lombok.RequiredArgsConstructor;

@@ -6,3 +6,8 @@ Content-Type: application/json
   "email": "a@b.oilerplate",
   "name": "hi"
 }
+
+> {% client.global.set("userId", response.body.userId) %}
+
+### Query By Id
+GET http://localhost:8080/user/{{userId}}

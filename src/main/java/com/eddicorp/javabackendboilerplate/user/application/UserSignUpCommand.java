@@ -1,4 +1,4 @@
-package com.eddicorp.javabackendboilerplate.user.application.dto;
+package com.eddicorp.javabackendboilerplate.user.application;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
