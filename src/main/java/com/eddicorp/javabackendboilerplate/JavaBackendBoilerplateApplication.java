@@ -9,5 +9,4 @@ public class JavaBackendBoilerplateApplication {
     public static void main(String[] args) {
         SpringApplication.run(JavaBackendBoilerplateApplication.class, args);
     }
-
 }
